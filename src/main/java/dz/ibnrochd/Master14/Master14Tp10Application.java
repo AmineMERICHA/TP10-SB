@@ -9,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
+
+
+
 @SpringBootApplication
 public class Master14Tp10Application implements CommandLineRunner {
 	
@@ -22,16 +25,17 @@ public class Master14Tp10Application implements CommandLineRunner {
 	
 	}
 	
+	
 	@Override
 	public void run(String... args) throws Exception {
 		
-	List<patients> Patients=patientRepository.findAll();
-	for (patients P : Patients) {
-	System.out.println(P.toString());
+		List<patients> L1=patientRepository.findAll();
+		for(patients l1:L1)
+		System.out.println(l1.getNom()+"  "+l1.getPrenom());
 		
 	}		
 	}
 	
 	
 
-}
+
